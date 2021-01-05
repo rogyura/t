@@ -3,17 +3,13 @@
  
  
   var str = document.getElementById("texts");
-  var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://serfyrog.github.io/t/', true);
 
-// Отсылаем его
- if (xhr.status != 200) {
-        // обработать ошибку
-        alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
-      } else {
-        // вывести результат
-        alert(xhr.responseText);
-      }
+var x = new XMLHttpRequest();
+x.open("GET", "https://serfyrog.github.io/t/", true);
+x.onload = function (){
+    alert( x.responseText);
+}
+x.send(null);
   str.innerHTML = 'lox';
 
   
