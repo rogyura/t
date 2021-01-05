@@ -1,1 +1,31 @@
-<h1>hello</h1>
+ <script>
+ function l(){
+ 
+ 
+  var str = document.getElementById("texts");
+  var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://serfyrog.github.io/t/', true);
+
+// Отсылаем его
+ if (xhr.status != 200) {
+        // обработать ошибку
+        alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+      } else {
+        // вывести результат
+        alert(xhr.responseText);
+      }
+  str.innerHTML = 'lox';
+
+  
+
+
+  
+ 
+ }
+ 
+ </script>
+ <center>
+ <p><b>Ваше имя:</b><br>
+   <input id="xyu" type="text" size="40">
+   <input type="submit" onclick="l()" value="Старт">
+   <br><p id='texts'>1</p>
